@@ -24,7 +24,7 @@ class NewVisitorTest(unittest.TestCase):
 
         # User noticed the web title include word "To-Do"
         self.assertIn('To-Do', self.browser.title)
-        self.fail('Finish the test!')
+        self.fail('Finish the test!')    # Fail immediately, with the given message, expected fail
 
         # 应用邀请她输入一个待办事项
 

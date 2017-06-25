@@ -9,6 +9,8 @@ from selenium.webdriver.common.keys import Keys
 import unittest
 import time
 
+from lists.models import Item
+
 
 class NewVisitorTest(unittest.TestCase):
     # If setUp throw Exception, tearDown method will not run.

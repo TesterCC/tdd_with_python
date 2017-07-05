@@ -44,6 +44,12 @@ class HomePageTest(TestCase):
                                          )
         self.assertEqual(response.content.decode(), expected_html)
 
+    # P61
+    def test_home_page_only_saves_items_when_necessary(self):
+        request = HttpRequest()
+        home_page(request)
+        self.assertEqual(Item.objects.count(), 0)
+
 
 # python manage.py test lists.tests.ItemModelTest   # run specific testcase
 class ItemModelTest(TestCase):
